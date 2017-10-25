@@ -143,6 +143,7 @@ return [
             'url'   => 'admin/users',
             'image' => '/images/widget-backgrounds/02.png',
         ],
+        // Posts and Pages handlers removed ---> SweetCrust Added
         // [
         //     'name'  => 'Post',
         //     'icon'  => 'voyager-news',
