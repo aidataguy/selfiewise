@@ -8,7 +8,8 @@ php:
 sudo: false
 
 before_script:
-  - composer install --dev --prefer-source --no-interaction
+  - composer install 
+  - npm install
   - php artisan key:generate
   - php artisan migrate --seed
 
