@@ -1,5 +1,5 @@
 <?php
-
+// Adds Facebook auth with Version 2.8 and Applies ID from  env's
 return [
     'config' => [
         'app_id' => env('FACEBOOK_APP_ID', null),
