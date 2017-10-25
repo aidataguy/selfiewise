@@ -37,7 +37,6 @@
                     .then( (r) => {
                         if(r.body == 1 )
                             this.status = 'waiting'
-                            // alert()->success('You Need to Wait Now', 'Request Sent')->autoclose(3000)
                             this.loading = false
                     } )
             },
@@ -47,7 +46,6 @@
                     .then( (r) => {
                         if(r.body == 1 )
                             this.status = 'Friends'
-                            // alert()->success('Yay!! You are now friends!', 'woot!!')->autoclose(3000)
                             this.loading = false
                     } )
             }

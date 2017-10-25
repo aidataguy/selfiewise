@@ -77,3 +77,14 @@ Route::group(['middleware' => 'auth'], function(){
 	]);
 
 });
+
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+// Facebook Route
+
+Route::post('login', 'FacebookUser@store');

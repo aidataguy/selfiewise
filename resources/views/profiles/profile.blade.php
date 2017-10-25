@@ -9,7 +9,7 @@
  						{{ $user-> name }}'s Profile.
 					</p>
  				</div>
- 				<div class="panel-body">
+ 				<div class="panel-body text-center">
  					<img src="{{ Storage::url($user->avatar)}}" alt="" class="img-circle" width="100em" height="100em">
  				</div>
  				<p class="text-center">
