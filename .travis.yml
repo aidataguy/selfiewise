@@ -11,6 +11,7 @@ before_script:
   - npm install
   - php artisan key:generate
   - php artisan migrate --seed
+  - cp .env.example .env
 
 notifications:
   email:
