@@ -28,4 +28,6 @@ Properitary License - all rights reserved and that means all of it
 **Free Software, Nope !**
 
 All Rights Reserved &copy;2017 AGS Cybertech and Softwares Private Limited
+
+** Repository is not for Public Use **
 ----
