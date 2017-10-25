@@ -23,7 +23,7 @@ class FacebookServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Facebook Singleton method -> registers user and adds images to hyper drive and storage
         $this->app->singleton(Facebook::class, function ($app) {
             return new Facebook(config('facebook.config'));
         });
