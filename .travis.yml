@@ -9,9 +9,10 @@ sudo: false
 before_script:
   - composer install 
   - npm install
+  - cp .env.example .env
   - php artisan key:generate
   - php artisan migrate --seed
-  - cp .env.example .env
+
 
 notifications:
   email:
