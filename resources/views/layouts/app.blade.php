@@ -54,9 +54,9 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
-                            <button id="btn-login" type="button" class="btn btn-primary btn-md">
-                                <span> Login with Facebook</span>
-                            </button>
+                            <li>
+                            <a href="{{ url('login/facebook') }}" class="btn btn-primary"><i class="fa fa-facebook"></i>Login With Facebook</a>
+                            </li>    
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

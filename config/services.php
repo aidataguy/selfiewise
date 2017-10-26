@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+
+    'facebook' => [
+       'client_id' => '1956522391268670', //Facebook API
+       'client_secret' => '34e55055c7de3d58ced05af7372542b2', //Facebook Secret
+       'redirect' => 'http://selfiewise.com/login/facebook/callback',
+    ],
+
 ];

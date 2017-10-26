@@ -14,28 +14,57 @@
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+ 
+                           @if(!empty($name))
+ 
+                               <input id="name" type="text" class="form-control" name="name" value="{{$name}}" required autofocus>
+ 
+                           @else
+ 
+                               <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+ 
+                           @endif    
+ 
+                               @if ($errors->has('name'))
+ 
+                                   <span class="help-block">
+ 
+                                       <strong>{{ $errors->first('name') }}</strong>
+ 
+                                   </span>
+ 
+                               @endif
+ 
+                           </div>
 
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+ 
+                               @if(!empty($email))
+ 
+                               <input id="email" type="email" class="form-control" name="email" value="{{$email}}" required>
+ 
+                               @else
+ 
+                               <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+ 
+                               @endif
+ 
+                               @if ($errors->has('email'))
+ 
+                                   <span class="help-block">
+ 
+                                       <strong>{{ $errors->first('email') }}</strong>
+ 
+                                   </span>
+ 
+                               @endif
+ 
+                           </div>
                         </div>
                          <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                             <label for="gender" class="col-md-4 control-label">Gender</label>
