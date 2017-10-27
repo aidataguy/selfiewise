@@ -37,6 +37,11 @@
                     .then( (r) => {
                         if(r.body == 1 )
                             this.status = 'waiting'
+                            swal({
+                                  title: "Request Sent",
+                                  text: "Request Has been Sent ;)",
+                                  icon: "success",
+                                });
                             this.loading = false
                     } )
             },
@@ -46,6 +51,11 @@
                     .then( (r) => {
                         if(r.body == 1 )
                             this.status = 'Friends'
+                            swal({
+                                  title: "New Request Received!!",
+                                  text: "Some one sent you a request ;) ",
+                                  icon: "success",
+                                });
                             this.loading = false
                     } )
             }

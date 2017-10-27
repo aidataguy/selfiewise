@@ -29,22 +29,22 @@ Route::get('/add', function (){
 
 	return \App\User::find(1)->add_friend(3);
 });
-Route::get('/accept', function (){
+// Route::get('/accept', function (){
 
-	return \App\User::find(3)->accept_friend(1);
-});
+// 	return \App\User::find(3)->accept_friend(1);
+// });
 
-Route::get('/friends', function(){
-	return \App\User::find(1)->friends();
-});
+// Route::get('/friends', function(){
+// 	return \App\User::find(1)->friends();
+// });
 
-Route::get('/pending_friends', function(){
-	return \App\User::find(3)->pending_friend_requests();
-});
+// Route::get('/pending_friends', function(){
+// 	return \App\User::find(3)->pending_friend_requests();
+// });
 
-Route::get('/is', function(){
-	 return \App\User::find(3)->is_friends_with(1);
-});
+// Route::get('/is', function(){
+// 	 return \App\User::find(3)->is_friends_with(1);
+// });
 
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/profile/{slug}', [
@@ -88,3 +88,4 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+ 

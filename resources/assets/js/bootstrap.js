@@ -42,7 +42,8 @@ import Pusher from "pusher-js"
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: 'c96a92828abbc7969d26'
+    key: 'c96a92828abbc7969d26',
+    cluster: 'mt1'
 });
 
 Pusher.log = function(message)
