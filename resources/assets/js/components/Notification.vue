@@ -16,8 +16,12 @@
 			listen() {
 				Echo.private('App.User.' + this.id)
 					.notification( (notification) => {
-						alert('new notification')
-						console.log(notification)
+						swal({
+                              title: "Request Accepted",
+                              text: notification.name + notification.messsage,
+                              icon: "success",
+                            });
+						document.getElementById("swal_audio").play()
 					})
 			}
 		}

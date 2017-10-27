@@ -84,6 +84,7 @@
         </nav>
         @yield('content')
         <notification :id="'{{ Auth::id() }}'"></notification>  
+        <audio id="swal_audio" src="{{ asset('audio/notify.ogg')}}"></audio>
     </div>
 
     <!-- Scripts -->

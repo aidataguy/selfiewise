@@ -58,7 +58,7 @@ class NewFriendRequest extends Notification
     {
         return [
             'name' => $this->user->name,
-            'message' => $this->user->name. 'has sent you a friend request..'
+            'message' => 'has sent you a friend request..'
         ];
     }
 }
