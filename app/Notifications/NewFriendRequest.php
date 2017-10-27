@@ -31,7 +31,7 @@ class NewFriendRequest extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'. 'broadcast', 'database'];
+        return ['mail', 'broadcast', 'database'];
     }
 
     /**

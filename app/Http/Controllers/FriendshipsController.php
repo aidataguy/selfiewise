@@ -35,7 +35,7 @@ class FriendshipsController extends Controller
     	
     	$resp  =  Auth::user()->add_friend($id);
 
-    	// User::find($id)->notify(new \App\Notifications\NewFriendRequest(Auth::user()) );
+    	User::find($id)->notify(new \App\Notifications\NewFriendRequest(Auth::user()) );
 
     	return $resp;
     }
