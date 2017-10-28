@@ -22,6 +22,8 @@ Route::get('/ch', function()
 
 
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -75,6 +77,12 @@ Route::group(['middleware' => 'auth'], function(){
 		'uses' => 'FriendshipsController@accept_friend',
 		'as' => 'accept_friend'
 	]);
+
+	// Get unread Notifications 
+	Route::get('get_unread', function() {
+    //
+    	return Auth::user()->unreadNotifications;
+	});
 
 });
 
