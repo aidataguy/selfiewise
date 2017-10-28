@@ -20,10 +20,6 @@ Route::get('/ch', function()
 	return \App\User::find(5)->add_friend(2);
 });
 
-
-
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -83,6 +79,11 @@ Route::group(['middleware' => 'auth'], function(){
     //
     	return Auth::user()->unreadNotifications;
 	});
+
+	Route::get('/notifications', [
+		'uses' => 'HomeController@notifications',
+		'as' => 'notifications'
+	]);
 
 });
 
