@@ -7,6 +7,7 @@ use Alert;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Socialite;
+use Storage;
 
 
 class User extends Authenticatable 
@@ -36,6 +37,15 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne('App\Profile');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }    
+    public function getAvatarAttribute($avatar)
+    {
+        return asset(Storage::url($avatar));
     }
     
 }

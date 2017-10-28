@@ -85,6 +85,17 @@ Route::group(['middleware' => 'auth'], function(){
 		'as' => 'notifications'
 	]);
 
+	Route::post('/create/post', [
+		'uses' => 'PostsController@store'
+	]);
+	Route::get('/feed', [
+		'uses' => 'FeedsController@feed',
+		'as' => 'feed'
+	]);
+	Route::get('/get_auth_user_data', function(){
+		return Auth::user();
+	});
+
 });
 
 

@@ -22,6 +22,7 @@
 </head>
 <body>
     <div id="app">
+        <init></init>
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -84,7 +85,10 @@
             </div>
         </nav>
         @yield('content')
-        <notification :id="'{{ Auth::id() }}'"></notification>  
+        
+        @if(Auth::check())
+            <notification :id="'{{ Auth::id() }}'"></notification>  
+        @endif
         <audio id="swal_audio" src="{{ asset('audio/notify.ogg')}}"></audio>
     </div>
 
