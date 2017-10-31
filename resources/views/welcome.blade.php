@@ -1,95 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+@extends('layouts/app')   
+@section('content')
+    <section class="about_us" id="about">
+        <div class="container">     
+            <h2>about</h2>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud</h5>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  </p> 
+                
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  </p> 
+                
+                <div class="col-lg-12 social">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-google"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-google-plus"></i>
+                </div>  
+            </div>
+            
+             <div class="col-lg-6 col-md-6 col-sm-6">
+                <img src="images/abt_img.jpg" />   
+            </div>
+        </div>  
+    </section>
+    
+    <section class="gallery" id="gallery">
+        <div class="container">     
+            <h2 class="small">gallery</h2>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud</h5>
+            <ul class="gallery_box col-lg-12">
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-lg-4 col-md-4 col-sm-4">
+                    <img src="images/gallery_img.jpg" />
+                    <div class="hover_gallery">
+                        <div class="likebtn"><a href=""><i class="fa fa-thumbs-up"></i><span>25</span></a></div>
+                        <div class="text_gallery">
+                            <h4>Hanna Montena</h4>
+                            <p>Lorem ipsum dolor sit </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    </section> 
+    
+    <section class="feature" id="feature">
+        <div class="container">
+            <h2 class="small">Features</h2>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud</h5>  
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <img src="images/feature_img.jpg" alt="" />
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <ul>
+                    <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                     <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                     <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                     <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                     <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                     <li>
+                        <h4>Bonorum et Malorum</h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>   
+    </section>  
+    
+    <section class="testimonial" id="testimonial">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                
+                      <div class="item active">                    
+                        <div class="carousel-caption">
+                            <img src="images/semi.png" alt="" />
+                          <h3>What <strong>People</strong> Say ?</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                          <h6>Finibus Bonorum</h6> 
+                        </div>
+                      </div>
+                
+                      <div class="item">
+                         <div class="carousel-caption">
+                            <img src="images/semi.png" alt="" />
+                          <h3>What <strong>People</strong> Say ?</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                          <h6>Finibus Bonorum</h6> 
+                        </div>
+                      </div>
+                    
+                      <div class="item">
+                         <div class="carousel-caption">
+                            <img src="images/semi.png" alt="" />
+                          <h3>What <strong>People</strong> Say ?</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                          <h6>Finibus Bonorum</h6> 
+                        </div>
+                      </div>
+                  
+                    </div>
+                    
+                     <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                  
+                </div><!--myCarousel fade in fade out-->
+        </div>
+    </section> 
+     
+    <section class="contact_us" id="contact">
+        <div class="container">
+            
+            <h5>Our contact information</h5>
+            <h2 class="small">Let's Talk </h2>
+            
+            <p class="fo0ter_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum </p>
+            
+            <div class="col-lg-12">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <i class="fa fa-phone"></i>
+                    <p> Call us from 11am to 7pm</p>
+                    <p> + 44 00 00 00 00</p>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <i class="fa fa-map-marker"></i>
+                    <p> Visit Us</p>
+                    <p>00, Street.... </p>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <i class="fa fa-envelope"></i>
+                    <p> Mail us </p>
+                    <p> support@selfiewise.com</p></div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </section>   
+        </div>
+ @endsection

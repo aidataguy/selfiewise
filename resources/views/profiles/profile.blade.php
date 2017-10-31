@@ -1,23 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="inner_content">
  	<div class="container">
- 		<div class="col-lg-4">
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
- 					<p class="text-center">
- 						{{ $user-> name }}'s Profile.
-					</p>
- 				</div>
- 				<div class="panel-body text-center">
- 					<img src="{{ $user->avatar }}" alt="" class="img-circle" width="100em" height="100em">
- 				</div>
- 				<p class="text-center">
- 					Location: {{ $user->profile->location }}
- 				</p>
+    <div class="col-lg-12">
+		<div class="timeline_outer col-lg-9 col-md-9 col-sm-9">
+	            <div class="blue_line"></div>
+	            <div class="blue_dot_end"></div>
+	            <div class="timeline_starts">
+	                <div class="timeline_by_month"> 
+	                    <h4 class="post_month"> <span>October 2017</span> </h4>
 
- 				
- 				<p class="text-center">
+	                   	 <feed></feed>
+
+	                </div> <!--timeline_by_month-->
+	            </div>
+            </div>
+			{{-- Advertsection --}}
+            <div class="col-lg-3 col-md-3 col-sm-3 advertisment_sec">
+                <div class="row-fluid">
+                    <h5>sponsered</h5>
+                    <img src="{{asset('images/add_cover.jpg')}}" />
+                    <h5>Watch free add</h5>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+                </div>
+            </div>
+            </div>    
+        </div>  
+        {{-- Old HTML --}}
+
+				
+				{{-- <p class="text-center">
  					@if(Auth::id() == $user->id)
 						<a href="{{ route('profile.edit') }}" class="btn btn-lg btn-info">Edit Your Profile</a>	
  					@endif
@@ -29,25 +43,7 @@
  					<friend :profile_user_id="{{ $user->id }}"></friend>
  				</div>
  			</div>
- 			@endif
- 			
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
- 					<p class="text-center">
- 						About Me!!!
- 					</p>
- 					<div class="panel-body">
-	 					<p class="text-center">
-	 						{{ $user->profile->about }}
-
-	 					</p>
- 						
- 					</div>
- 				</div>
- 			</div>
- 			
- 		</div>
- 	</div>
-
+ 			@endif --}}
+</section>
 
 @stop

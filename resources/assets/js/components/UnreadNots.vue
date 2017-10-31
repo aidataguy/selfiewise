@@ -1,10 +1,11 @@
 <template>
-	<li>
+
 		<a href="/notifications">
-			Unread Notifications
-			<span class="badge">{{ all_nots_count }}</span>
+			<i class="fa fa-bell">
+				{{ all_nots_count }}
+			</i>
 		</a>
-	</li>
+
 </template>
 
 <script>

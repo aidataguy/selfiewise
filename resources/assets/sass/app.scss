@@ -1,12 +1,25 @@
-
+﻿
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 // Variables
 @import "variables";
+@import "mystyle";
+@import "bootsnav";
+@import "bootstrap-responsive";
+@import "reset";
+
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-//Imports Noty
-@import "noty.css"
+// custom styles here ...
+.img-circle{
+	width: 50px;
+}
+
+.nav-image{
+	height:70px;
+	width:70px;
+	border-radius: 50%;
+}
