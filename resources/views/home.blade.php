@@ -2,7 +2,7 @@
 
 @section('content')
  <post></post>
-{{-- @if($posts = App\Post::all())
+@if($posts = App\Post::all())
 	@foreach($posts as $post)
 		<br>
 		<img src="{{ $post->user->avatar }}" alt="">	<br>
@@ -11,5 +11,5 @@
 	    {{ $post->content }}
 
 	@endforeach
-@endif --}}
+@endif
 @endsection
