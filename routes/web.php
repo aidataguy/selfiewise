@@ -20,6 +20,8 @@ Route::get('/ch', function()
 	return \App\User::find(5)->add_friend(2);
 });
 
+Route::get('/friends', 'ProfilesController@friends');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

@@ -25,25 +25,31 @@
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
                 </div>
+                <div class="row-fluid">
+                    {{-- Display User Friends --}}
+                    <h5>My Friends</h5>
+                       @foreach ($friends as $friend)
+                            {{ $friend->name }} - {{ $friend->email }} 
+                            <img src="{{ url('/')}}/storage/{{($friend->avatar) }}" alt="">
+                        @endforeach
+               </div>
             </div>
             </div>    
-        </div>  
+    </div>  
         {{-- Old HTML --}}
 
-				
-				{{-- <p class="text-center">
+				<p class="text-center">
  					@if(Auth::id() == $user->id)
 						<a href="{{ route('profile.edit') }}" class="btn btn-lg btn-info">Edit Your Profile</a>	
  					@endif
  				</p>
- 			</div>
- 			@if(Auth::id() !== $user->id )
- 			<div class="panel panel-default">
- 				<div class="body">
- 					<friend :profile_user_id="{{ $user->id }}"></friend>
- 				</div>
- 			</div>
- 			@endif --}}
+            @if(Auth::id() !== $user->id )
+ 			    <div class="panel panel-default">
+     				<div class="body">
+     					<friend :profile_user_id="{{ $user->id }}"></friend>
+     				</div>
+     			</div>
+ 			@endif  
 </section>
 
 @stop

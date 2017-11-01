@@ -4,7 +4,7 @@
 
 // Variables
 @import "variables";
-@import "mystyle";
+
 @import "bootsnav";
 @import "bootstrap-responsive";
 @import "reset";
@@ -12,6 +12,7 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "mystyle";
 
 // custom styles here ...
 .img-circle{
@@ -22,4 +23,8 @@
 	height:70px;
 	width:70px;
 	border-radius: 50%;
+}
+
+.about_heading{
+	padding-top: 15px;
 }

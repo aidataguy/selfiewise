@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
+use App\Post;
 
 
 class HomeController extends Controller
@@ -17,7 +19,6 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -32,5 +33,11 @@ class HomeController extends Controller
         Auth::user()->unreadNotifications->markAsRead();
         return view('nots')->with('nots', Auth::user()->notifications);
 
+    }
+    public function post_index()
+    {
+        $posts = Post::all();
+
+        return view('home', compact('posts'));
     }
 }

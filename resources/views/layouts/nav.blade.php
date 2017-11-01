@@ -1,9 +1,14 @@
   <header class="default">
-        <div class="top_home_img" >
 
-            <img src="/images/home_img.jpg" alt="" />
-            <div class="hover_text">Click,Upload <br /> and Win</div>
-        </div>
+        @if (\Request::is('/'))
+            <div class="top_home_img" >
+                <img src="/images/home_img.jpg" alt="" />
+                <div class="hover_text">Click,Upload <br /> and Win</div>
+            </div>
+        @else
+            
+        @endif
+        
         <nav class="navbar navbar-default navbar-fixed brand-center bootsnav on no-full" id="navbarMain">
                     <div class="container">
                         <div class="navbar-header">

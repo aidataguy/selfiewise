@@ -1,18 +1,23 @@
-    <footer>
-    	<div class="container">
-            <div class="col-lg-12 social_footer">
-                	<i class="fa fa-facebook"></i>
-                    <i class="fa fa-twitter"></i>
-                    <i class="fa fa-youtube"></i>
-                    <i class="fa fa-linkedin"></i>
-                    <i class="fa fa-google"></i>
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-google-plus"></i>
-          	</div>	
-            <p> &copy; Selfiewise 2017</p>
-            <p class="small"> Made with <i class="fa fa-heart"></i> by {{-- <a href="http://pythonist.pw">Himanshu Patel</a> --}} </p>
-        </div>
-    </footer>
+@if (\Request::is('login'))
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+@else
+  <footer>
+    <div class="container">
+        <div class="col-lg-12 social_footer">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-google"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-google-plus"></i>
+        </div>  
+        <p> &copy; Selfiewise 2017</p>
+        <p class="small"> Made with <i class="fa fa-heart"></i> by {{-- <a href="http://pythonist.pw">Himanshu Patel</a> --}} </p>
+    </div>
+</footer>
+  
+    	
 <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -50,3 +55,4 @@ function myFunction() {
     }
 }
 </script>
+@endif  
