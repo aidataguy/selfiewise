@@ -8,8 +8,7 @@
 	                    <textarea rows="3" class="form-control" v-model="content"></textarea>
 	                    <br>
 	                    <button class="btn btn-success pull-right" :disabled="not_working" @click="create_post()">
-	                    	Create a post
-	                    </button>
+	                    	Create Post </button>
 	                </div>
 	            </div>
 	        </div>
@@ -33,11 +32,18 @@
 				this.$http.post('/create/post', { content: this.content })
 					.then((resp) => {
 						this.content = ''
-						swal({
-                              title: "Awesome!!",
-                              text: "Post Created Successfully",
-                              icon: "success",
-                            });
+						// localStorage.setItem("swal",
+                                swal({
+                                    title: "Awesome!",
+                                    text:  "Poste Created Successfully",
+                                    icon: "success",
+                                    timer: 3500,
+                                    ShowConfirmation: false
+                                });
+                        // );
+                        
+                        // localStorage.getItem("swal");
+                        location.reload();
 						console.log(resp)
 					})
 			}

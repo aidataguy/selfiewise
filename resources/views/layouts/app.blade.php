@@ -14,6 +14,8 @@
 		 	 @include('layouts/nav_user')
 		@elseif (\Request::is('login'))
 			@include('layouts/nav_blank')
+		@elseif(\Request::is('home'))
+			@include('layouts/nav_user')
 		@else
 			@include('layouts/nav')
 		@endif

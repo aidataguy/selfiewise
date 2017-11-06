@@ -17,9 +17,12 @@
             
             <unread></unread></i>
             <a href="{{ route('profile', ['slug' => Auth::user()->slug ]) }}">
-            <span><img src="{{ Auth::user()->avatar }}" alt="" class="nav-image img-circle"></span>{{ Auth::user()->name }}</a>
+            <span>
+            @if($user = Auth::user())
+                <img src="{{ url( $user->avatar) }}" alt="" class="nav-image img-circle">
+            @endif
+            </span>
+                {{ Auth::user()->name }}</a>
 		</div> 
         
-</header>
-	
-	
+</header>	

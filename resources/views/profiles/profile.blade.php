@@ -25,14 +25,7 @@
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
                 </div>
-                <div class="row-fluid">
-                    {{-- Display User Friends --}}
-                    <h5>My Friends</h5>
-                       @foreach ($friends as $friend)
-                            {{ $friend->name }} - {{ $friend->email }} 
-                            <img src="{{ url('/')}}/storage/{{($friend->avatar) }}" alt="">
-                        @endforeach
-               </div>
+               
             </div>
             </div>    
     </div>  
