@@ -9,7 +9,7 @@
                 {{-- <i class="fa fa-youtube"></i> --}}
                 {{-- <i class="fa fa-linkedin"></i> --}}
                 <i class="fa fa-google"></i>
-                <i class="fa fa-instagram"></i>
+                {{-- <i class="fa fa-instagram"></i> --}}
                 <i class="fa fa-google-plus"></i>
         </div>  
         <p> &copy; Selfiewise 2017</p>
